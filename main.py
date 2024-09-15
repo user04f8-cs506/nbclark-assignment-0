@@ -11,12 +11,10 @@ if __name__ == "__main__":
     while len(nums) < 2:
         try:
             raw_input = input("> ")
-            nums.append(int(raw_input))
+            nums.append(float(raw_input))
             
         except ValueError:
-            # nums.append(float(raw_input)) # TODO add proper handling
-            print('Please enter a number')
-            pass
+            print('Please enter a number (must be interpretable as a float)')
 
     print(f"{nums[0]} + {nums[1]} = {sum(nums)}")
 
